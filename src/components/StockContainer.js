@@ -3,7 +3,7 @@ import Stock from "./Stock";
 
 function StockContainer({ stocks, onBuyStock, sort, filter}) {
   const newStock = stocks
-  .filter((stock) => filter ? true :filter === stock.type)
+  .filter((stock) => filter === "All" ? true :filter === stock.type)
   .sort((stockA, stockB)=>{
     switch (sort) {
       case "Price" :
